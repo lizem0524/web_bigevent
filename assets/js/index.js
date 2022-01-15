@@ -1,4 +1,4 @@
-$(function () {
+
 
     getUserInfo()
 
@@ -44,4 +44,3 @@ $(function () {
             $('.text-avtar').html(first).show()
         }
     }
-})
