@@ -76,6 +76,7 @@ $(function () {
                 fd.append('cover_img', blob)
                 publishArticle(fd)
             })
+        
     })
     function publishArticle(fd) {
         $.ajax({
@@ -85,6 +86,7 @@ $(function () {
             contentType: false,
             processData: false,
             success: function (res) {
+                console.log(res);
                 if (res.status !== 0) {
                     return layer.msg('发布文章失败')
                 }

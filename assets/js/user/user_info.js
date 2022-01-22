@@ -24,11 +24,13 @@ $(function () {
     // 提交表单监听事件
     $('.layui-form').on('submit', function (e) {
         e.preventDefault()
+        console.log($(this).serialize());
         $.ajax({
             method: 'POST',
             url: '/my/userinfo',
             data: $(this).serialize(),
             success: function (res) {
+                console.log(res);
                 if (res.status !== 0) {
                     return layer.msg('信息提交失败')
                 }

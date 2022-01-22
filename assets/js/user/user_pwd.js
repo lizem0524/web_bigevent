@@ -22,6 +22,7 @@ $(function () {
             url: "/my/updatepwd",
             data: $(this).serialize(),
             success: function (res) {
+                console.log(res);
                 if (res.status !== 0) {
                     return layui.layer.msg('更新密码失败')
                 }
