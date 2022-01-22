@@ -1,8 +1,8 @@
 // 配置全局的ajax请求的属性
 $.ajaxPrefilter(function (options) {
     // 发起Ajax前统一拼接根路径
-    // const str = 'http://www.liulongbin.top:3007'
-    const str = 'http://127.0.0.1'
+    const str = 'http://www.liulongbin.top:3007'
+    const str1 = 'http://127.0.0.1'
     options.url = str + options.url;
     // 判断接口是否含/my/，统一请求头
     if (options.url.indexOf('/my/') !== -1) {
